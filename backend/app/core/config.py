@@ -7,6 +7,8 @@ class Settings(BaseSettings):
     DEBUG: bool = True
     API_PREFIX: str = "/api/v1"
 
+    DATABASE_URL: str
+
     model_config = SettingsConfigDict(
         env_file=".env",
         extra="ignore"
